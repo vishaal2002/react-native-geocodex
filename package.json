@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "react-native-geocodex",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "A smart and lightweight geocoding utility for React Native. Supports forward and reverse geocoding using OpenStreetMap without an API key.",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
