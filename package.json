@@ -4,12 +4,12 @@
   "version": "1.0.0",
   "description": "A smart and lightweight geocoding utility for React Native. Supports forward and reverse geocoding using OpenStreetMap without an API key.",
   "main": "lib/commonjs/index.js",
-  "types": "lib/typescript/src/index.d.ts",
+  "types": "lib/typescript/index.d.ts",
   "exports": {
     ".": {
-      "source": "./src/index.tsx",
-      "types": "./lib/typescript/src/index.d.ts",
-      "default": "./lib/module/index.js"
+      "require": "./lib/commonjs/index.js",
+      "import": "./lib/module/index.js",
+      "types": "./lib/typescript/index.d.ts"
     },
     "./package.json": "./package.json"
   },
