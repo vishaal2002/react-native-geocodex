@@ -3,8 +3,8 @@
   "name": "react-native-geocodex",
   "version": "1.0.0",
   "description": "A smart and lightweight geocoding utility for React Native. Supports forward and reverse geocoding using OpenStreetMap without an API key.",
-  "main": "./lib/module/index.js",
-  "types": "./lib/typescript/src/index.d.ts",
+  "main": "lib/commonjs/index.js",
+  "types": "lib/typescript/src/index.d.ts",
   "exports": {
     ".": {
       "source": "./src/index.tsx",
@@ -16,6 +16,9 @@
   "files": [
     "src",
     "lib",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
     "android",
     "ios",
     "cpp",
@@ -27,9 +30,6 @@
     "!android/gradlew",
     "!android/gradlew.bat",
     "!android/local.properties",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__",
     "!**/.*"
   ],
   "scripts": {
@@ -65,16 +65,31 @@
     "@eslint/eslintrc": "^3.3.0",
     "@eslint/js": "^9.22.0",
     "@evilmartians/lefthook": "^1.5.0",
+    "@react-native-community/bob": "^0.17.1",
     "@react-native/babel-preset": "0.78.2",
     "@react-native/eslint-config": "^0.78.0",
     "@release-it/conventional-changelog": "^9.0.2",
+    "@types/babel__generator": "^7.27.0",
+    "@types/babel__template": "^7.4.4",
+    "@types/istanbul-lib-report": "^3.0.3",
     "@types/jest": "^29.5.5",
+    "@types/node": "^22.15.30",
     "@types/react": "^19.0.12",
+    "@types/yargs-parser": "^21.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.33.1",
+    "@typescript-eslint/parser": "^8.33.1",
     "commitlint": "^19.6.1",
     "del-cli": "^5.1.0",
     "eslint": "^9.22.0",
     "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-ft-flow": "^3.0.11",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jest": "^28.12.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-native": "^5.0.0",
     "jest": "^29.7.0",
     "prettier": "^3.0.3",
     "react": "19.0.0",
@@ -149,5 +164,20 @@
   },
   "dependencies": {
     "axios": "^1.9.0"
-  }
+  },
+  "react-native": "src/index.tsx",
+  "module": "lib/module/index.js",
+  "@react-native-community/bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ]
 }
